@@ -1,8 +1,8 @@
 const { SlashCommandBuilder, ChatInputCommandInteraction, ButtonStyle } = require('discord.js');
-const PollGuildConfiguration = require('../../../models/PollGuildConfgiuration');
-const Poll = require('../../../models/Poll');
+const PollGuildConfiguration = require('../../models/PollGuildConfgiuration');
+const Poll = require('../../models/Poll');
 const { EmbedBuilder, ButtonBuilder, ActionRowBuilder } = require('@discordjs/builders');
-const formatPolls = require('../../../utils/formatPolls');
+const formatPolls = require('../../utils/formatPolls');
 
 module.exports = {
 

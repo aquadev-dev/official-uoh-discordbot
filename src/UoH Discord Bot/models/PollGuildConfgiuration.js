@@ -1,6 +1,6 @@
 const { Schema, model} = require('mongoose');
 
-const guildConfigurationSchema = new Schema({
+const pollGuildConfigurationSchema = new Schema({
     guildId: {
         type: String,
         required: true,
@@ -11,4 +11,4 @@ const guildConfigurationSchema = new Schema({
     }
 });
 
-module.exports = model('GuildConfiguration', guildConfigurationSchema)
+module.exports = model('PollGuildConfiguration', pollGuildConfigurationSchema)
