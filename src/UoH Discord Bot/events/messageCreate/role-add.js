@@ -13,7 +13,7 @@ const wait = require('node:timers/promises').setTimeout;
 module.exports = async (message, client, interaction) => {
     const channel = client.channels.cache.get('1203325007149797417');
     const eventUser = message.member.roles.highest.position;
-    const botGuild = client.guilds.cache.get('879384420807737405');
+    const botGuild = client.guilds.cache.get(message.member.guild.id);
     const botPosition = botGuild.members.me.roles.highest.position;
     
     if (eventUser >= botPosition && message.channelId.match(channel.id)) {
