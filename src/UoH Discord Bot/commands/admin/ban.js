@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, Interaction, Client, ChatInputCommandInteraction, EmbedBuilder, ApplicationCommandOptionWithChoicesAndAutocompleteMixin } = require("discord.js");
+const { SlashCommandBuilder, Client, ChatInputCommandInteraction, EmbedBuilder} = require("discord.js");
 require('dotenv/config');
 
 module.exports = {
