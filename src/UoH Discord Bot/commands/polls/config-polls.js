@@ -36,7 +36,7 @@ module.exports = {
             const channel = interaction.options.getChannel('channel');
 
             if (!pollGuildConfiguration.pollChannelIds.includes(channel.id)) {
-                await interaction.reply(`${channel} is not a suggestion channel.`);
+                await interaction.reply(`${channel} is not a poll channel.`);
                 return;
             };
 
@@ -45,7 +45,7 @@ module.exports = {
             );
             await pollGuildConfiguration.save();
 
-            await interaction.reply(`Removed ${channel} from suggestion channels`);
+            await interaction.reply(`Removed ${channel} from poll channels`);
             return;
         }
     },

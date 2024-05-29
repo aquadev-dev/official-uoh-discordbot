@@ -18,14 +18,14 @@ module.exports = {
 
             if (!pollGuildConfiguration?.pollChannelIds.length) {
                 await interaction.reply(
-                    'This server has not been configured to use suggestions yet.\nAsk an admin to run `/config-suggestions add` to set this up.'
+                    'This server has not been configured to use polls yet.\nAsk an admin to run `/config-polls add` to set this up.'
                 );
                 return;
             }
 
             if (!pollGuildConfiguration.pollChannelIds.includes(interaction.channelId)) {
                 await interaction.reply(
-                    `This channel is not configured to use suggestions. Try one of these channels instead: ${pollGuildConfiguration.
+                    `This channel is not configured to use polls. Try one of these channels instead: ${pollGuildConfiguration.
                         pollChannelIds
                         .map((id) => `<#${id}>`)
                         .join(', ')}`

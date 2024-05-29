@@ -54,15 +54,14 @@ module.exports = {
         
         
         const channel = client.channels.cache.get('1143162457456644187');
+
         
-        channel.send({embeds: [embed]})
-        interaction.reply({ content: 'Embed Created', ephemeral: true});
-        
+        channel.send({embeds: [embed]});
+        interaction.reply({ content: 'Embed Sent', ephemeral: true});
     },
 
     options: {
         userPermissions: ['Administrator'],
         botPermissions: ['Administrator'],
-        deleted: false,
-    },
-}
+    }
+};
