@@ -1,6 +1,6 @@
 const { ChatInputCommandInteraction, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, Embed, EmbedBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const SuggestionGuildConfiguration = require('../../models/SuggestionGuildConfiguration');
-const Suggestion = require('../../models/Suggestion');
+const SuggestionGuildConfiguration = require('../../models/Suggestions/SuggestionGuildConfiguration');
+const Suggestion = require('../../models/Suggestions/Suggestion');
 const formatSuggestions = require("../../utils/formatSuggestions");
 
 module.exports = {

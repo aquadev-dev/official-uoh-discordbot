@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, ChannelType, ChatInputCommandInteraction } = require('discord.js');
-const SuggestionGuildConfiguration = require('../../models/SuggestionGuildConfiguration');
+const SuggestionGuildConfiguration = require('../../models/Suggestions/SuggestionGuildConfiguration');
 
 module.exports = {
     /**
