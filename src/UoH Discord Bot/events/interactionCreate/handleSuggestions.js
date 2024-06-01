@@ -1,5 +1,5 @@
 const { Interaction } = require("discord.js");
-const Suggestion = require('../../models/Suggestion');
+const Suggestion = require('../../models/Suggestions/Suggestion');
 const formatSuggestions = require("../../utils/formatSuggestions");
 
 /**

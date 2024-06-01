@@ -1,5 +1,5 @@
 const { Interaction } = require('discord.js');
-const Poll = require('../../models/Poll');
+const Poll = require('../../models/Polls/Poll');
 const formatPolls = require('../../utils/formatPolls');
 
 /**
