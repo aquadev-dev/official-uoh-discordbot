@@ -4,6 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('close-report')
         .setDescription('Close a bot report thread when either fixed or based of legitimacy.')
+        .setDMPermission(false)
         .addStringOption(option => 
             option
                 .setName('reason')
@@ -37,7 +38,7 @@ module.exports = {
 
         if (thread.parentId == reportChannel.id) {
             const embed = new EmbedBuilder()
-                        .setTitle(`This thread as been closed by the admin ${interaction.user.displayName} because for the reason of ${reason}`)
+                        .setTitle(`This thread has been closed by the admin ${interaction.user.displayName} because for the reason of ${reason}`)
                         .setDescription(
                             "If you find another issue with the bot please create another thread!" 
                             + "\n Thank you for reporting this issue - Nathan (The Bots Developer)"
