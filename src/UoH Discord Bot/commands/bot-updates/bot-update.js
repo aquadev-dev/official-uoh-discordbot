@@ -1,5 +1,6 @@
+const { error } = require("console");
 const { SlashCommandBuilder, ChatInputCommandInteraction, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, EmbedBuilder } = require("discord.js");
-const { options } = require("../threads/close-report");
+const fs = require('fs');
 
 
 module.exports = {
@@ -76,6 +77,7 @@ module.exports = {
                 return;
             }
 
+
             const updateFeatures = modalInteraction.fields.getTextInputValue('update-features-bugs');
 
             modalInteraction.editReply('Update Message created!');
@@ -90,6 +92,26 @@ module.exports = {
                 content: ' ',
                 embeds: [updateEmbed],
             });
+
+            fs.readFile('package.json', (error, data) => {
+                if (error) throw error;
+
+                var packageJSONobj = JSON.parse(data);
+
+                packageJSONobj.version = updateVersion;
+
+
+
+                fs.writeFile('package.json', packageJSONobj, (error) => {
+                    if (error) throw error;
+
+                    console.log('version changed in package.json!')
+                });
+            })
+
+            
+
+
         } catch (error) {
             console.log(`Error in /bot-update: ${error}`)
             console.log(error)

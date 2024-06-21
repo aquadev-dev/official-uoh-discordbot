@@ -1,7 +1,8 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const { CommandKit } = require('commandkit');
 const path = require('path');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { execSync } = require('child_process');
 require('dotenv/config'); 
  
 const client = new Client({
@@ -19,6 +20,8 @@ new CommandKit({
     devGuildIds: ['879384420807737405'],
     devUserIds: ['422043862509551627'],
 });
+
+execSync('npm update');
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log('Connected to Database.')
