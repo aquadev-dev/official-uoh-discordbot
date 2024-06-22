@@ -100,7 +100,7 @@ module.exports = {
 
                 packageJSONobj.version = updateVersion;
 
-
+                packageJSONobj = JSON.stringify(packageJSONobj);
 
                 fs.writeFile('package.json', packageJSONobj, (error) => {
                     if (error) throw error;
