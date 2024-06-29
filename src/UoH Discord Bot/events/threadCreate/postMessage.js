@@ -12,7 +12,7 @@ const { Client, ChatInputCommandInteraction, ChannelType, EmbedBuilder, ThreadCh
 
 module.exports = async (thread, client) => {  
 
-    reportForumId = '1252290701182632016';
+    reportForumId = process.env.REPORT_CHANNEL;
      
     if (thread.parentId != reportForumId) {
         return;

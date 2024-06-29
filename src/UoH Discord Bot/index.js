@@ -17,8 +17,8 @@ new CommandKit({
     client,
     commandsPath: path.join(__dirname, 'commands'),
     eventsPath: path.join(__dirname, 'events'),
-    devGuildIds: ['879384420807737405'],
-    devUserIds: ['422043862509551627'],
+    devGuildIds: [`${process.env.DEV_GUILD_ID}`],
+    devUserIds: [`${process.env.OWNER_ID}`],
 });
 
 execSync('npm update');

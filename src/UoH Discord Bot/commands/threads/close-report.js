@@ -25,7 +25,7 @@ module.exports = {
         if (!interaction.channel.isThread()) return;
 
         const thread = interaction.channel;
-        const reportChannel = client.channels.cache.get('1252290701182632016');
+        const reportChannel = client.channels.cache.get(process.env.REPORT_CHANNEL);
         
 
         

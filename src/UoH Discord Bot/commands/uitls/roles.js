@@ -31,7 +31,7 @@ module.exports = {
                 {name: ' ', value: 'For 🤎 <@&1142017306306826320> type other-c'},
             );
         
-        const channel = client.channels.cache.get('1203325007149797417');
+        const channel = client.channels.cache.get(process.env.ROLE_CHANNEL);
 
         channel.send({embeds: [embed]})
 

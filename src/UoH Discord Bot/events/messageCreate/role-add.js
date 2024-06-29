@@ -11,7 +11,7 @@ const wait = require('node:timers/promises').setTimeout;
 
 
 module.exports = async (message, client, interaction) => {
-    const channel = client.channels.cache.get('1203325007149797417');
+    const channel = client.channels.cache.get(process.env.ROLE_CHANNEL);
     const eventUser = message.member.roles.highest.position;
     const botGuild = client.guilds.cache.get(message.member.guild.id);
     const botPosition = botGuild.members.me.roles.highest.position;
@@ -19,121 +19,121 @@ module.exports = async (message, client, interaction) => {
     if (eventUser >= botPosition && message.channelId.match(channel.id)) {
         switch (message.content.toLowerCase()) {
             case "comp":
-                const hasCompRole = message.member.roles.cache.has('1142015628220313600')
+                const hasCompRole = message.member.roles.cache.has(process.env.COMP_ROLE);
                 if (hasCompRole) {
-                    await message.member.roles.remove('1142015628220313600')
+                    await message.member.roles.remove(process.env.COMP_ROLE);
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
 
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142015628220313600');
+                    await message.member.roles.add(process.env.COMP_ROLE);
                     message.delete(message.id);
                     return;
                 }
                 
             case "compsci":
-                const hasCompsciRole = message.member.roles.cache.has('1142015761540456479')
+                const hasCompsciRole = message.member.roles.cache.has(process.env.COMPSCI_ROLE)
                 if (hasCompsciRole) {
-                    await message.member.roles.remove('1142015761540456479')
+                    await message.member.roles.remove(process.env.COMPSCI_ROLE);
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142015761540456479');
+                    await message.member.roles.add(process.env.COMPSCI_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "cybersec":
-                const hasCybersecRole = message.member.roles.cache.has('1142015872886652949')
+                const hasCybersecRole = message.member.roles.cache.has(process.env.CYBERSEC_ROLE)
                 if (hasCybersecRole) {
-                    await message.member.roles.remove('1142015872886652949')
+                    await message.member.roles.remove(process.env.CYBERSEC_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142015872886652949');
+                    await message.member.roles.add(process.env.CYBERSEC_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "games-prog":
-                const hasGamesProgRole = message.member.roles.cache.has('1142016924344139837')
+                const hasGamesProgRole = message.member.roles.cache.has(process.env.GAMESPROG_ROLE);
                 if (hasGamesProgRole) {
-                    await message.member.roles.remove('1142016924344139837')
+                    await message.member.roles.remove(process.env.GAMESPROG_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142016924344139837');
+                    await message.member.roles.add(process.env.GAMESPROG_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "AI":
-                const hasAIRole = message.member.roles.cache.has('1142016999627690064')
+                const hasAIRole = message.member.roles.cache.has(process.env.AI_ROLE)
                 if (hasAIRole) {
-                    await message.member.roles.remove('1142016999627690064')
+                    await message.member.roles.remove(process.env.AI_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142016999627690064');
+                    await message.member.roles.add(process.env.AI_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "I-T":
-                const hasITRole = message.member.roles.cache.has('1142017074168860672')
+                const hasITRole = message.member.roles.cache.has(process.env.IT_ROLE)
                 if (hasITRole) {
-                    await message.member.roles.remove('1142017074168860672')
+                    await message.member.roles.remove(process.env.IT_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017074168860672');
+                    await message.member.roles.add(process.env.IT_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "comp-biss":
-                const hasCompBissRole = message.member.roles.cache.has('1142017156599533608')
+                const hasCompBissRole = message.member.roles.cache.has(process.env.COMPBISS_ROLE)
                 if (hasCompBissRole) {
-                    await message.member.roles.remove('1142017156599533608')
+                    await message.member.roles.remove(process.env.COMPBISS_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017156599533608');
+                    await message.member.roles.add(process.env.COMPBISS_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "softw-eng":
-                const hasSoftWEngRole = message.member.roles.cache.has('1142017495704817675')
+                const hasSoftWEngRole = message.member.roles.cache.has(process.env.SOFTW_ROLE)
                 if (hasSoftWEngRole) {
-                    await message.member.roles.remove('1142017495704817675')
+                    await message.member.roles.remove(process.env.SOFTW_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017495704817675');
+                    await message.member.roles.add(process.env.SOFTW_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "other-c":
-                const hasOtherCRole = message.member.roles.cache.has('1142017306306826320')
+                const hasOtherCRole = message.member.roles.cache.has(process.env.OTHER_ROLE)
                 if (hasOtherCRole) {
-                    await message.member.roles.remove('1142017306306826320')
+                    await message.member.roles.remove(process.env.OTHER_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017306306826320');
+                    await message.member.roles.add(process.env.OTHER_ROLE);
                     message.delete(message.id);
                     return;
                 }
@@ -155,121 +155,121 @@ module.exports = async (message, client, interaction) => {
     if (message.channelId.match(channel.id)) {
         switch (message.content.toLowerCase()) {
             case "comp":
-                const hasCompRole = message.member.roles.cache.has('1142015628220313600')
+                const hasCompRole = message.member.roles.cache.has(process.env.COMP_ROLE)
                 if (hasCompRole) {
-                    await message.member.roles.remove('1142015628220313600')
+                    await message.member.roles.remove(process.env.COMP_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
 
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142015628220313600');
+                    await message.member.roles.add(process.env.COMP_ROLE);
                     message.delete(message.id);
                     return;
                 }
                 
             case "compsci":
-                const hasCompsciRole = message.member.roles.cache.has('1142015761540456479')
+                const hasCompsciRole = message.member.roles.cache.has(process.env.COMPSCI_ROLE)
                 if (hasCompsciRole) {
-                    await message.member.roles.remove('1142015761540456479')
+                    await message.member.roles.remove(process.env.COMPSCI_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142015761540456479');
+                    await message.member.roles.add(process.env.COMPSCI_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "cybersec":
-                const hasCybersecRole = message.member.roles.cache.has('1142015872886652949')
+                const hasCybersecRole = message.member.roles.cache.has(process.env.CYBERSEC_ROLE)
                 if (hasCybersecRole) {
-                    await message.member.roles.remove('1142015872886652949')
+                    await message.member.roles.remove(process.env.CYBERSEC_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142015872886652949');
+                    await message.member.roles.add(process.env.CYBERSEC_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "games-prog":
-                const hasGamesProgRole = message.member.roles.cache.has('1142016924344139837')
+                const hasGamesProgRole = message.member.roles.cache.has(process.env.GAMESPROG_ROLE)
                 if (hasGamesProgRole) {
-                    await message.member.roles.remove('1142016924344139837')
+                    await message.member.roles.remove(process.env.GAMESPROG_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142016924344139837');
+                    await message.member.roles.add(process.env.GAMESPROG_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "AI":
-                const hasAIRole = message.member.roles.cache.has('1142016999627690064')
+                const hasAIRole = message.member.roles.cache.has(process.env.AI_ROLE)
                 if (hasAIRole) {
-                    await message.member.roles.remove('1142016999627690064')
+                    await message.member.roles.remove(process.env.AI_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142016999627690064');
+                    await message.member.roles.add(process.env.AI_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "I-T":
-                const hasITRole = message.member.roles.cache.has('1142017074168860672')
+                const hasITRole = message.member.roles.cache.has(process.env.IT_ROLE)
                 if (hasITRole) {
-                    await message.member.roles.remove('1142017074168860672')
+                    await message.member.roles.remove(process.env.IT_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017074168860672');
+                    await message.member.roles.add(process.env.IT_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "comp-biss":
-                const hasCompBissRole = message.member.roles.cache.has('1142017156599533608')
+                const hasCompBissRole = message.member.roles.cache.has(process.env.COMPBISS_ROLE)
                 if (hasCompBissRole) {
-                    await message.member.roles.remove('1142017156599533608')
+                    await message.member.roles.remove(process.env.COMPBISS_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017156599533608');
+                    await message.member.roles.add(process.env.COMPBISS_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "softw-eng":
-                const hasSoftWEngRole = message.member.roles.cache.has('1142017495704817675')
+                const hasSoftWEngRole = message.member.roles.cache.has(process.env.SOFTW_ROLE)
                 if (hasSoftWEngRole) {
-                    await message.member.roles.remove('1142017495704817675')
+                    await message.member.roles.remove(process.env.SOFTW_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017495704817675');
+                    await message.member.roles.add(process.env.SOFTW_ROLE);
                     message.delete(message.id);
                     return;
                 }
             case "other-c":
-                const hasOtherCRole = message.member.roles.cache.has('1142017306306826320')
+                const hasOtherCRole = message.member.roles.cache.has(process.env.OTHER_ROLE)
                 if (hasOtherCRole) {
-                    await message.member.roles.remove('1142017306306826320')
+                    await message.member.roles.remove(process.env.OTHER_ROLE)
                     message.reply({content: 'Your role has been removed!'});
                     await wait(3_000);
                     message.delete(message.id);
                     return;
                 } else {
-                    await message.member.roles.add('1142017306306826320');
+                    await message.member.roles.add(process.env.OTHER_ROLE);
                     message.delete(message.id);
                     return;
                 }

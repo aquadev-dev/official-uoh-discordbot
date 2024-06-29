@@ -6,7 +6,7 @@ const {EmbedBuilder, GuildMember, Client} = require('discord.js');
  */
 
 module.exports = (member, client) => {
-    const channelId = '881119318149066802';
+    const channelId = process.env.WELCOME_CHANNEL;
 
     const welcomeEmbed = new EmbedBuilder()
         .setTitle(`Hello ${member.user.displayName}, welcome to the UoH Computer Science Server!`)

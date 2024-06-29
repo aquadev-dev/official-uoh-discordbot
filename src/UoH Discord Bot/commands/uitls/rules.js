@@ -53,7 +53,7 @@ module.exports = {
             .setFooter({text: 'UoH Compsci Discord Server', iconURL: 'https://cdn.discordapp.com/avatars/1141762624296583210/4f0beb1f11dd0c86e17eefeeb7f58fb6.png?size=256'});
         
         
-        const channel = client.channels.cache.get('1143162457456644187');
+        const channel = client.channels.cache.get(process.env.RULES_CHANNEL);
 
         
         channel.send({embeds: [embed]});

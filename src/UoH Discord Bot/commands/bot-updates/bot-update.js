@@ -32,10 +32,10 @@ module.exports = {
     run: async ({ interaction }) => {
 
         try {
-            const updateChannel = interaction.client.channels.cache.get('1253401017668599809');
+            const updateChannel = interaction.client.channels.cache.get(process.env.UPDATE_CHANNEL);
 
             if (interaction.channelId != updateChannel) {
-                interaction.reply({content: 'Please run this command in the channel <#1253401017668599809>', ephemeral: true })
+                interaction.reply({content: `Please run this command in the channel <#${process.env.UPDATE_CHANNEL}>`, ephemeral: true })
                 return;
             }
 

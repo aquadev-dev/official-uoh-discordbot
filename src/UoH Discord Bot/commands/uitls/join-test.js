@@ -11,7 +11,7 @@ module.exports = {
      */
 
     run: ({interaction, client, handler}) => {
-        const channelId = '881119318149066802';
+        const channelId = process.env.WELCOME_CHANNEL;
 
         const welcomeEmbed = new EmbedBuilder()
             .setTitle("Hello `<@MemberNameHere>`, welcome to the UoH Computer Science Server!")

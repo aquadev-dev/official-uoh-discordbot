@@ -3,7 +3,7 @@ const { Client, Message} = require('discord.js');
 const { OpenAI } = require('openai');
 
 const IGNORE_PREFIX = "!";
-const CHANNELS = ['1146876647820238848'];
+const CHANNELS = [`${process.env.AI_CHANNEL}`];
 
 const openai = new OpenAI({
     apiKey: process.env.OPEN_AI_KEY,
