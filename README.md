@@ -13,5 +13,23 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" hieght="50" width="60">
   <img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg" hieght="50" width="60">
   <img src="https://raw.githubusercontent.com/underctrl-io/commandkit/next/apps/docs/public/logo_lg.webp" hieght="50" width="60">
-
+  <img src="logos/chatgpt-icon.png" hieght="50" width="60">
 </div>
+
+<h2>Tools Used</h2>
+<div align="start">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" hieght="50" width="60">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" hieght="50" width="60">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" hieght="50" width="60">
+  <img src="logos/chatgpt-icon.png" hieght="50" width="60">
+</div>
+
+<h2>Features</h2>
+
+-	Has a ‘.env’ file that stores everything that makes the bot run, including it’s token and various role IDs
+-	Includes admin commands such as ‘ban’, ‘kick’, and ‘timeout’ which helps moderators of the server handle anyone not following the rules
+-	Includes bot update command where the bot owner (i.e., me) can update people on what has changed with the bot and update the bot’s ‘package.json’ file to maintain the bot’s version control.
+-	Includes bot report system that utilises threads to help users report issues with the bot.
+-	Includes fun things like ‘rock, paper, scissors game’ and AI chat.
+-	Includes util commands that help me run and maintain the bot
+-	It includes events that help the server, like a ‘welcome message’ and a role management system that assigns the role of your specific course within computer science.
